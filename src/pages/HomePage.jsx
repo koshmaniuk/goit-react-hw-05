@@ -4,13 +4,13 @@ import { getTrendingMovies } from '../api';
 
 const HomePage = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
+
   useEffect(() => {
     async function fetchdata() {
       try {
         setTrendingMovies([]);
         const fetchedMovies = await getTrendingMovies();
         setTrendingMovies(fetchedMovies);
-        console.log(fetchedMovies);
       } catch (error) {}
     }
     fetchdata();

@@ -1,10 +1,6 @@
 import axios from 'axios';
 
-const url = 'https://api.themoviedb.org/3/trending/movie/day?language=en-US';
-const searchUrl =
-  'https://api.themoviedb.org/3/search/movie?query=batman&include_adult=false&language=en-US&page=1';
-// https://api.themoviedb.org/3/trending/movie/day?language=en-US
-// https://api.themoviedb.org/3/search/movie?query=batman&include_adult=false&language=en-US&page=1'
+const url = 'https://api.themoviedb.org/3/trending/movie/day';
 
 const options = {
   headers: {
@@ -18,34 +14,15 @@ export const getTrendingMovies = async () => {
   return response.data.results;
 };
 
-export const getMovies = async () => {
-  const response = await axios.get(searchUrl, options);
+export const getMovies = async film => {
+  const response = await axios.get(
+    `https://api.themoviedb.org/3/search/movie?query=${film}&include_adult=false&language=en-US&page=1`,
+    options
+  );
   return response.data.results;
 };
 
-//
-// const url = 'https://api.themoviedb.org/3/search/movie';
-// const API_KEY = '';
-// const options = {
-//   params: {
-//     api_key: API_KEY,
-//     include_adult: false,
-//     language: 'en-US',
-//     page: 1,
-//   },
-// };
-// export const getFilm = async query => {
-//   try {
-//     const response = await axios.get(url, {
-//       params: {
-//         ...options.params,
-//         query: query,
-//       },
-//     });
-//     console.log(response.data);
-//     return response.data;
-//   } catch (error) {
-//     console.error(error);
-//     throw error;
-//   }
-// };
+export const getMovieDetails = () => {};
+
+// https://api.themoviedb.org/3/trending/movie/day?language=en-US
+// https://api.themoviedb.org/3/search/movie?query=batman&include_adult=false&language=en-US&page=1'
