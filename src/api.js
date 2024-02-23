@@ -22,7 +22,29 @@ export const getMovies = async film => {
   return response.data.results;
 };
 
-export const getMovieDetails = () => {};
+export const getMovieDetails = async movieId => {
+  const response = await axios.get(
+    `https://api.themoviedb.org/3/movie/${movieId}?language=en-US`,
+    options
+  );
+  return response.data;
+};
+
+export const getMovieCredits = async movieId => {
+  const response = await axios.get(
+    `https://api.themoviedb.org/3/movie/${movieId}/credits?language=en-US`,
+    options
+  );
+  return response.data;
+};
+
+export const getMovieReviews = async movieId => {
+  const response = await axios.get(
+    `https://api.themoviedb.org/3/movie/${movieId}/reviews?language=en-US&page=1`,
+    options
+  );
+  return response.data;
+};
 
 // https://api.themoviedb.org/3/trending/movie/day?language=en-US
 // https://api.themoviedb.org/3/search/movie?query=batman&include_adult=false&language=en-US&page=1'
