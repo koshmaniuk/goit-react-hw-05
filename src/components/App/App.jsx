@@ -3,6 +3,7 @@ import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import Navigation from '../Navigation/Navigation';
+import Loader from '../Loader/Loader';
 const HomePage = lazy(() => import('../../pages/HomePage/HomePage'));
 const MoviesPage = lazy(() => import('../../pages/MoviesPage/MoviesPage'));
 const MovieDetailsPage = lazy(() => import('../../pages/MovieDetailsPage/MovieDetailsPage'));
@@ -14,7 +15,7 @@ const App = () => {
   return (
     <div className={css.container}>
       <Navigation />
-      <Suspense fallback={<b>Loading page...</b>}>
+      <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/movies" element={<MoviesPage />} />
