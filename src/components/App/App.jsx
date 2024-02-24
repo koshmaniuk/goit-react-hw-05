@@ -1,17 +1,19 @@
+import css from './App.module.css';
 import { Route, Routes } from 'react-router-dom';
-import { Navbar } from './Navbar';
-import MovieCast from './MovieCast';
-import MovieReviews from './MovieReviews';
+import { Toaster } from 'react-hot-toast';
+import Navigation from '../Navigation/Navigation';
+import MovieCast from '../MovieCast/MovieCast';
+import MovieReviews from '../MovieReviews/MovieReviews';
 
-import HomePage from '../pages/HomePage';
-import MoviesPage from '../pages/MoviesPage';
-import MovieDetailsPage from '../pages/MovieDetailsPage/MovieDetailsPage';
-import NotFoundPage from '../pages/NotFoundPage';
+import HomePage from '../../pages/HomePage/HomePage';
+import MoviesPage from '../../pages/MoviesPage/MoviesPage';
+import MovieDetailsPage from '../../pages/MovieDetailsPage/MovieDetailsPage';
+import NotFoundPage from '../../pages/NotFoundPage/NotFoundPage';
 
 const App = () => {
   return (
     <div>
-      <Navbar />
+      <Navigation />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/movies" element={<MoviesPage />} />
@@ -21,6 +23,7 @@ const App = () => {
         </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+      <Toaster />
     </div>
   );
 };

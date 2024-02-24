@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const url = 'https://api.themoviedb.org/3/trending/movie/day';
+// https://api.themoviedb.org/3/trending/movie/day
 
 const options = {
   headers: {
@@ -46,5 +47,8 @@ export const getMovieReviews = async movieId => {
   return response.data;
 };
 
-// https://api.themoviedb.org/3/trending/movie/day?language=en-US
+// https://api.themoviedb.org/3/trending/movie/day?language=en-US - trending
+// https://api.themoviedb.org/3/movie/${movieId}?language=en-US - movie details
+// https://api.themoviedb.org/3/movie/${movieId}/credits?language=en-US - movie cast
+// https://api.themoviedb.org/3/movie/${movieId}/reviews?language=en-US&page=1 - movie reviews
 // https://api.themoviedb.org/3/search/movie?query=batman&include_adult=false&language=en-US&page=1'

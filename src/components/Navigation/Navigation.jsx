@@ -1,12 +1,11 @@
-import { NavLink } from 'react-router-dom';
+import css from './Navigation.module.css';
 import clsx from 'clsx';
-import css from './Navbar.module.css';
+import { NavLink } from 'react-router-dom';
 
 const buildLinkClass = ({ isActive }) => {
   return clsx(css.link, isActive && css.active);
 };
-
-export const Navbar = () => {
+const Navigation = () => {
   return (
     <nav className={css.nav}>
       <NavLink to="/" className={buildLinkClass}>
@@ -18,3 +17,5 @@ export const Navbar = () => {
     </nav>
   );
 };
+
+export default Navigation;
