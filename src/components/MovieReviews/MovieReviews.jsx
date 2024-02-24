@@ -12,7 +12,7 @@ const MovieReviews = () => {
   useEffect(() => {
     async function fetchDetails() {
       try {
-        setLoading;
+        setLoading(true);
         const fetchedDetails = await getMovieReviews(movieId);
         setReviews(fetchedDetails.results);
       } catch (error) {
@@ -30,7 +30,7 @@ const MovieReviews = () => {
         <ul>
           {reviews.map(review => (
             <li key={review.id}>
-              <p>{review.author}</p>
+              <p className={css.author}>{review.author}</p>
               <p>{review.content}</p>
             </li>
           ))}

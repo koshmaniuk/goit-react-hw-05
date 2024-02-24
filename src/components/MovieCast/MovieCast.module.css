@@ -1,0 +1,13 @@
+ul {
+  list-style: none;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.listItem {
+  width: 150px;
+}

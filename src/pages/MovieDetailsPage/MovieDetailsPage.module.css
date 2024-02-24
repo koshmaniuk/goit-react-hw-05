@@ -1,8 +1,38 @@
+.movieDetailsPageContainer {
+  margin: 20px;
+}
 .container {
   display: flex;
+  margin-top: 14px;
 }
 
 .aditionalInfo {
   display: flex;
   flex-direction: column;
+}
+.poster {
+  margin-right: 30px;
+}
+
+.link {
+  display: block;
+  width: 66px;
+  height: 18px;
+  background-color: #6495ed;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.goBackLink:hover {
+  color: #fcc603;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

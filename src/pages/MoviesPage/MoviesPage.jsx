@@ -49,7 +49,7 @@ const MoviesPage = () => {
   }, [movieTitle]);
 
   return (
-    <div>
+    <div className={css.moviePageContainer}>
       <SearchForm onSubmit={handleSearchSubmit} />
       {error && <ErrorText />}
       {noResult && <NoResult />}

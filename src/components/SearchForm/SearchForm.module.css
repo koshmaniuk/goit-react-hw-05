@@ -1,0 +1,32 @@
+.searchForm {
+  align-self: center;
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.searchInput {
+  width: 300px;
+  height: 24px;
+  outline: none;
+}
+.searchInput:focus {
+  border: 2px solid #fcc603;
+}
+
+.searchBtn {
+  height: 30px;
+  background-color: #6495ed;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.searchBtn:hover {
+  color: #fcc603;
+}

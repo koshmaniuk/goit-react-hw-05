@@ -31,9 +31,9 @@ const MovieCast = () => {
     <div>
       {loading && <Loader />}
       {cast.length > 0 ? (
-        <ul>
+        <ul className={css.list}>
           {cast.map(actor => (
-            <li key={actor.id}>
+            <li key={actor.id} className={css.listItem}>
               <img
                 src={
                   actor.profile_path || null

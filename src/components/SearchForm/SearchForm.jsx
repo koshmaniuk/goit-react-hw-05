@@ -7,9 +7,11 @@ const SearchForm = ({ onSubmit }) => {
     event.target.reset();
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" name="searchField" />
-      <button type="submit">Search</button>
+    <form onSubmit={handleSubmit} className={css.searchForm}>
+      <input type="text" name="searchField" className={css.searchInput} />
+      <button type="submit" className={css.searchBtn}>
+        Search
+      </button>
     </form>
   );
 };

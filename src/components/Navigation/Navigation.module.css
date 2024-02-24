@@ -1,10 +1,14 @@
 .nav {
   display: flex;
-  gap: 4px;
+  gap: 20px;
+  height: 50px;
+  background-color: #6495ed;
+  justify-content: center;
+  align-items: center;
 }
 
 .link {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -13,5 +17,5 @@
 }
 
 .active {
-  color: orange;
+  color: #fcc603;
 }
